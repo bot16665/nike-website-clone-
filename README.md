@@ -1,6 +1,3 @@
-Here’s a well-structured `README.md` file for your Nike website clone project:
-
-```markdown
 # Nike Website Clone
 
 This project is a **frontend-only** clone of the official Nike website, built using **HTML**, **CSS**, and **JavaScript**. It aims to replicate the design, layout, and some key features of the original site for learning and showcase purposes.
