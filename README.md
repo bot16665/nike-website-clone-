@@ -22,27 +22,7 @@ This project is a **frontend-only** clone of the official Nike website, built us
 
 ---
 
-## 📂 Folder Structure
 
-```
-nike-website-clone/
-├── index.html         # Main HTML file
-├── css/
-│   └── style.css      # Main stylesheet
-├── js/
-│   └── script.js      # JavaScript functionality
-├── images/
-│   └── ...            # Images used in the project
-└── README.md          # Project documentation
-```
-
----
-
-## 📸 Preview
-
-![Website Screenshot](images/preview.png)
-
----
 
 ## 🖥️ How to Run Locally
 
@@ -51,24 +31,11 @@ nike-website-clone/
    git clone https://github.com/your-username/nike-website-clone.git
    ```
 
-2. **Navigate to the project folder**:
-   ```bash
-   cd nike-website-clone
-   ```
-
 3. **Open the `index.html` file** in your browser:
    - Double-click on `index.html`.
    - Or use a live server (e.g., via VS Code) for better experience.
 
----
 
-## ✨ Future Enhancements
-
-- Add a shopping cart feature.
-- Implement user login and registration.
-- Integrate APIs for live product data.
-
----
 
 ## 🙌 Acknowledgments
 
@@ -78,7 +45,5 @@ This project is for **educational purposes only** and is not affiliated with or 
 
 ## 📧 Contact
 
-For any questions or feedback, reach out to **[Azhar Shaikh](https://www.linkedin.com/in/your-profile)**.
+For any questions or feedback, reach out to **[Azhar Shaikh](www.linkedin.com/in/azhar-shaikh12345)**.
 ```
-
-You can customize the sections like the **Preview** and **Contact** with your actual details. Let me know if you need further modifications!
