@@ -4,6 +4,13 @@ This project is a **frontend-only** clone of the official Nike website, built us
 
 ---
 
+
+---
+
+i don't  create for mobile . you can create and modify 
+is only work desktop.
+
+---
 ## 🚀 Features
 
 - **Responsive Design**: Fully responsive layout for desktop, tablet, and mobile devices.
