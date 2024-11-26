@@ -1,0 +1,742 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    height: auto; /* Allow height to adjust based on content */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden;
+}
+
+/* Top Navigation */
+.top-nav {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.top-nav span {
+    color: #ccc;
+}
+
+/* Main Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 30px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.utility-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/*search-bar*/
+
+.search-box {
+    display: flex;
+    align-items: center;
+ 
+    border-radius: 20px;
+    background-color: #282828;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 10px;
+    width: 300px;
+}
+
+.search-box input::placeholder {
+    color: #fff;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px; /* Add some padding to the button */
+}
+.search-box .icon {
+    width: 20px;
+    height: 20px;
+    padding: 5px 10px;
+}
+
+
+/* Image Parts */
+.image-part img,
+.image-part2 img {
+    width: 40px; /* Set a specific width for the images */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure images do not exceed their container */
+    max-height: 100%; /* Ensure images do not exceed their container */
+}
+
+.icon {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.icon:hover,
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #11a07c;
+    width: 30vw; /* Full viewport width */
+    z-index: 1;
+    color: white;
+    margin-top: 10px;
+    padding: 20px;
+    box-shadow: none;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    border-radius: 50px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns layout */
+    gap: 20px;
+    opacity: 1;
+}
+   
+
+.dropdown-content a {
+    color: white;
+    padding: 5px 0;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Multi-Column Dropdown Styling */
+.multi-column .column h3 {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.multi-column .column a {
+    font-size: 14px;
+    padding: 8px 12px; /* Add padding for better click area */
+    border-radius: 4px; /* Rounded corners for links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.multi-column .column a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+}
+
+/* Banner Styles */
+.banner {
+    position: relative;
+    max-width: 1300px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    margin: 0 auto; /* Center the banner */
+    padding: 40px;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+}
+.banner-title {
+    font-family: 'Arial', sans-serif; /* Example font for h1 */
+    font-size: 2.5em; /* Adjust size as needed */
+    font-weight: bold; /* Make it bold */
+    color: white; /* Change color to white for better contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a shadow for better visibility */
+    text-align: center;
+    padding: 30px;
+}
+
+.banner-description {
+    font-family: 'Verdana', sans-serif; /* Example font for p */
+    font-size: 1.2em; /* Adjust size as needed */
+    color: #666; /* Change color as needed */
+    text-align: center;
+    margin-top: 10px; /* Adjust margin to bring it closer to the title */
+}
+
+.banner-button {
+    background-color: #ff5722; /* Example button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+    margin: 20px auto; /* Center the button */
+    display: block; /* Make it a block element to center */
+}
+
+.banner-button:hover {
+    background-color: #19c7e6; /* Darker shade on hover */
+}
+
+.latest-text {
+    margin-bottom: 20px; /* Add some space below the section */
+    color: white;
+    padding-top: 19vw;
+    text-align:left;
+    margin-left: 30px;
+}
+
+/* Poster Section --*/
+
+.poster-container {
+    display: flex; /* Use flexbox for the container */
+    justify-content: space-between; /* Space between posters */
+    width: 100%; /* Full width of the container */
+    max-width: 1300px;
+
+    padding-left: 30px;
+    
+}
+
+.poster {
+    position: relative; /* Position relative for absolute positioning of text */
+    flex: 1; /* Allow posters to grow equally */
+    margin: 10px; /* No margin */
+}
+
+.poster-image img {
+    width: 100%; /* Make image take full width */
+    height: auto; /* Maintain aspect ratio */
+}
+.poster-text {
+    position: absolute; /* Position text on top of the image */
+    bottom: 0; /* Align text at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    color: white; /* Change text color for visibility */
+    text-align: center; /* Center text */
+    padding: 10px; /* Optional: Add some padding */
+}
+.poster-button {
+    background-color: #FF5733; /* Example background color */
+    color: white; /* Text color */
+    font-size: 1em; /* Font size */
+    padding: 10px 20px; /* Padding for top/bottom and left/right */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.poster-button:hover {
+    background-color: #C70039; /* Darker shade on hover */
+}
+
+/*slider*/
+.image-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  
+}
+.class-text{
+    color: white;
+    padding: 50px;
+    padding-bottom: 0px;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: fit-content;
+}
+
+.slide {
+    flex: 0 0 100px; /* Set each image to be 100px wide */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 5px; /* Optional: add space between images */
+    object-fit: cover; /* Crop image to fit the 100px box if needed */
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.slider-button.left {
+    left: 10px;
+}
+
+.slider-button.right {
+    right: 10px;
+}
+
+/*banner 2*/
+
+.banner-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    
+}
+/* Add this CSS to your style.css file */
+.dont-miss-text {
+    font-size: 50px; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    color: #ffffff; /* Change text color to white */
+    text-align: left; /* Align the text to the left */
+    margin: 90px 0; /* Add some margin above and below */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for better readability */
+}
+
+.banner-image-2 {
+    width: 90%;
+    height: auto;
+    max-height: 900px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-left: 80px;
+}
+
+.banner-text-2 {
+    max-width: 600px;
+   color: white;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for better readability */
+
+}
+
+.banner-description-2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for better readability */
+
+}
+
+.banner-title-2 {
+    font-size:50px;
+    color: white;
+    font-weight: bold;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow for better readability */
+
+}
+
+.banner-button-2 {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color:#FF5733;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.banner-button-2:hover {
+    background-color: #C70039;
+    color: #111;
+}
+
+/*slider 2*/
+   /* Section styling */
+   .slider-section-2 {
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+    padding: 40px;
+  }
+  .slider-section-2 h2 {
+    font-size:50px;
+    margin-bottom: 20px;
+  
+  }
+  
+  /* Slider container */
+  .slider-container-2 {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .slider-2 {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .slider-item-2 {
+    margin: 0 30px;   /* Added margin for spacing between images */
+  }
+  
+  /* Image styling */
+  .slider-item-2 img {
+    width: 300px;
+    height:300px;
+    max-width: 600px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+   /* Label styling */
+.label{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background-color: white;
+    border-radius: 5px;
+}
+
+  
+  /* Arrow button styling */
+  .arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10; /* Ensure buttons are on top */
+
+  }
+  .arrow-btn.left {
+    left: 10px;
+  }
+  .arrow-btn.right {
+    right: 10px;
+  }
+  .arrow-btn:hover {
+    background-color: #fafafa;
+  }
+
+ /* Carousel container */
+ .carousel {
+    position: relative;
+    width: 100%; /* Full width */
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+  }
+  
+  .new-text{
+    font-weight: bold;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 100px;
+  }
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 30px; /* Space between items */
+  }
+  
+  .carousel-item {
+    flex: 0 0 30.5%; /* Each item takes 30% of the container */
+    box-sizing: border-box;
+    position: relative;
+    color: white;
+  }
+  
+  .carousel-item img {
+    width: 100%; /* Image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    object-fit: cover; /* Ensure images cover their space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  }
+  
+  .carousel-item .content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+  }
+  
+
+  /* Caption overlay */
+  .caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .caption h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .caption p {
+    margin: 5px 0 10px;
+    font-size: 1rem;
+  }
+
+  .caption button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    color: white;
+    background-color: #FF5733;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Navigation buttons */
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-button.left {
+    left: 10px;
+  }
+
+  .nav-button.right {
+    right: 40px;
+  }
+
+  /* Adjusting for small screens */
+  @media (max-width: 768px) {
+    .caption {
+      bottom: 10px;
+      left: 10px;
+      padding: 10px;
+    }
+
+    .caption h3 {
+      font-size: 1.2rem;
+    }
+
+    .caption p {
+      font-size: 0.9rem;
+    }
+
+    .caption button {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+    }
+  }
+
+  /*table*/
+  .tag-container {
+    display: flex; /* Use flexbox to arrange tag groups side by side */
+    padding: 100px;
+}
+
+.tag-group {
+    margin-left: 100px;
+}
+
+.tag-group:last-child {
+    margin-right: 0; /* Remove margin from the last tag group */
+}
+
+.tag-group h3 {
+    margin-bottom: 10px; /* Space between h3 and the list */
+    color:white;
+    font-weight: bold;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.tag-group ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+.tag-group li {
+    margin-bottom: 15px; /* Add space between list items */
+    text-align: center;
+}
+.tag-group a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove underline from links */
+
+}
+.tag-group ul li {
+    display: none; /* Hide all tags initially */
+}
+.tag-group ul li:nth-child(-n+4) {
+    display: block; /* Show the first 4 tags */
+}
+.tag-group:hover ul li {
+    display: block; /* Show all tags on hover */
+}
+.tag-group a:hover {
+  color: #ff0000; /* Change link color on hover */
+  transition: color 0.3s ease; /* Add transition effect to color change */
+}
+/*footer part*/
+.footer {
+    background-color: #111; /* Dark background */
+    color: #fff; /* White text */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+.footer .mean, .footer .india {
+    flex: 1 1 200px; /* Make each section flexible */
+}
+
+.footer h1 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin: 8px 0;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+    
+}
+
+.footer ul li a:hover {
+    color: #ff9900; /* Nike's accent color */
+}
+
+.footer .india img {
+    width: 50px; /* Adjust according to the symbol */
+    margin-top: 15px;
+}
+
+.footer .last {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer .last h1 {
+    font-size: 12px;
+    color: #aaa; /* Light gray text */
+}
